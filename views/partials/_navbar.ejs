@@ -4,7 +4,9 @@
     <!-- if the user is logged in -->
     <% if (user) { %> 
      <a href="/users/<%= user._id %>/foods">View my Pantry</a>
+     <a href="/users">Explore Our Community</a>
      <a href="/auth/sign-out">Sign out</a>
+
     
      <% } else { %>
       <a href="/auth/sign-up">Sign up</a>
