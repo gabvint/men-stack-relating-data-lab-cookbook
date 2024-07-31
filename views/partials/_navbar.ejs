@@ -1,0 +1,13 @@
+<nav>
+    <a href="/">Home</a>
+
+    <!-- if the user is logged in -->
+    <% if (user) { %> 
+     <a href="/users/<%= user._id %>/foods">View my Pantry</a>
+     <a href="/auth/sign-out">Sign out</a>
+    
+     <% } else { %>
+      <a href="/auth/sign-up">Sign up</a>
+      <a href="/auth/sign-in">Sign in</a>
+    <% } %>
+</nav>
