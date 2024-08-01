@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title><%= user.username %></title>
 </head>
 <body>
+    
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Meet other Users!</h1>
-
+    <h1><%= user.username %>'s Pantry</h1>
+    
     <ul>
-        <% users.forEach(user => { %>
-            <li>
-             <a href="/users/<%= user._id %>"><%= user.username %></a>
-            </li>
+        <% foods.forEach(food => { %>
+            <li><%= food.name %></li>
         <% }) %>
     </ul>
+  
 </body>
 </html>
